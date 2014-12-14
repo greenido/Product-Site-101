@@ -25,9 +25,13 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        #goBut {
+            margin: 0.3em;
+        }
+    </style>
 
 </head>
-
 <body>
 
     <!-- Navigation -->
@@ -86,7 +90,7 @@
                     
                         <div class="form-group">
                             <input type="text" id="uEmail" class="form-control input-lg" placeholder="Your email">
-                            <a href="#thankyou" id="goBut" class="btn btn-lg btn-dark">I'm In!</a>
+                            <a href="#thx" id="goBut" class="btn btn-lg btn-dark">I'm In!</a>
                         </div>
                         <br>
                         <small>Psst... We will never spam you!</small>
@@ -312,6 +316,7 @@
         }
         else {
             $(".alert-warning").show();
+            $("#uEmail").focus();
         }
         
     })
