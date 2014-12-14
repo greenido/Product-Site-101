@@ -1,7 +1,10 @@
 # Simple product site Example
 
 ## ToDo
-* Contact Form
+* Contact Form:
+  * http://kb.mailchimp.com/lists/signup-forms/add-a-signup-form-to-your-website
+  * Google Forms
+  * Create your own
 * SDK
 
 ## Tech Stack
