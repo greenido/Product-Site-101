@@ -81,10 +81,13 @@
                 <div class="col-md-4"></div>
                 <div class="col-md-4 text-center">
                     <form class="form-inline" role="form">
+                        <div class="alert alert-info" role="alert">Thank you! We will be in touch.</div>
+                        <div class="alert alert-warning" role="alert">Oppss... Please enter a valid email</div>
+                    
                         <div class="form-group">
-                            
-                            <input type="text" class="form-control input-lg" placeholder="Your email"></div>
-                        <a href="#thankyou" class="btn btn-lg btn-dark">I'm In!</a>
+                            <input type="text" id="uEmail" class="form-control input-lg" placeholder="Your email">
+                            <a href="#thankyou" id="goBut" class="btn btn-lg btn-dark">I'm In!</a>
+                        </div>
                         <br>
                         <small>Psst... We will never spam you!</small>
                     </form>
@@ -111,11 +114,8 @@
                                 </span>
                                 <h4> <strong>Get a pilot job</strong>
                                 </h4>
-                                <p>ToDo: 
-                                    <ul>
-                                        <li>An amazing photo of a pilot in work</li>
-                                        <li>Video?</li>
-                                    </ul>
+                                <p>ToDo: An amazing photo of a pilot in work <br>
+                                        Video?
                                 </p>
                                 <a href="#" class="btn btn-light">Learn More</a>
                             </div>
@@ -276,6 +276,8 @@
 
     // Scrolls to the selected menu item on the page
     $(function() {
+        $( ".alert" ).hide();
+
         $('a[href*=#]:not([href=#])').click(function() {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
 
@@ -290,6 +292,29 @@
             }
         });
     });
+
+    //
+    // validator for email
+    //
+    function validateEmail(email) { 
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }    
+    // email saver
+    $("#goBut").click(function(e) {
+        // send the email
+        var uEmail = $("#uEmail").val();
+        if (validateEmail(uEmail)) {
+            $.get( "https://script.google.com/macros/s/AKfycbzX_5c7gkqc-dttpHsK2KvTH3XJgAMh0jaXIky7cHPNEmchy_M/exec", { email: uEmail } );    
+            // show thx dialog
+            $(".alert-warning").hide();
+            $(".alert-info").show();
+        }
+        else {
+            $(".alert-warning").show();
+        }
+        
+    })
     </script>
 
 </body>
