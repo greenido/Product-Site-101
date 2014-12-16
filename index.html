@@ -207,7 +207,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
-                <h2>Get In-touch - Todo</h2>
+                <h2>Get In-touch - Todo: 
+                    <a href="http://ido-green.appspot.com" class="btn btn-lg btn-light" target="_blank">Projects in the wild</a>
+                </h2>
             </div>
         </div>
     </div>
@@ -242,7 +244,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="http://twitter.com/greenamit" target="_blank">
+                        <a href="http://twitter.com/greenido" target="_blank">
                             <i class="fa fa-twitter fa-fw fa-3x"></i>
                         </a>
                     </li>
@@ -277,8 +279,10 @@
 
     // Scrolls to the selected menu item on the page
     $(function() {
+        // hide our little alerts around the email field
         $( ".alert" ).hide();
 
+        // scroll nicely from the menu to the right location on the page
         $('a[href*=#]:not([href=#])').click(function() {
             if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
 
@@ -295,7 +299,7 @@
     });
 
     //
-    // validator for email
+    // Validator for email - just the first layer of defense ;)
     //
     function isEmailValid(email) { 
         var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
