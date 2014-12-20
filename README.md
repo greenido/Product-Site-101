@@ -1,7 +1,7 @@
 # Simple product site Example
 
 ## ToDo
-* Contact Form - leverage Google forms / [mailchimp](https://apidocs.mailchimp.com/) / WuFoo
+* Contact Form - leverage Google forms / [mailchimp](https://apidocs.mailchimp.com/) / [WuFoo](http://www.wufoo.com/)
 * Test the options to use WSK tools in the dev process.
 * SDK
 
