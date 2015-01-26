@@ -6,6 +6,9 @@
   * Google Forms
   * Create your own
 * SDK
+* Videos to show the power of the platform
+* Feedback form(s)
+
 
 ## Tech Stack
 * http://getbootstrap.com/
