@@ -1,7 +1,7 @@
 # Simple product site 
 
 ## ToDo
-* Contact Form - leverage Google forms / [mailchimp](https://apidocs.mailchimp.com/) / [WuFoo](http://www.wufoo.com/)
+* Contact Form - See how to customize Google forms or go with [mailchimp](https://apidocs.mailchimp.com/) / [WuFoo](http://www.wufoo.com/)
 * Test the options to use WSK tools in the dev process.
 * Check the option to use [ServiceWorkers](https://github.com/slightlyoff/ServiceWorker)
 * SDK
