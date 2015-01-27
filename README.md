@@ -1,4 +1,4 @@
-# Simple product site Example
+# Simple product site 
 
 ## ToDo
 * Contact Form - leverage Google forms / [mailchimp](https://apidocs.mailchimp.com/) / [WuFoo](http://www.wufoo.com/)
