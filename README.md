@@ -5,6 +5,7 @@
 * Test the options to use WSK tools in the dev process.
 * Check the option to use [ServiceWorkers](https://github.com/slightlyoff/ServiceWorker)
 * SDK
+* F... Ya!
 
 ## Tech Stack
 * http://getbootstrap.com/
