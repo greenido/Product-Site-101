@@ -62,13 +62,25 @@
     <header id="top" class="header">
         <div class="text-vertical-center">
             <h1>Drone At Work</h1>
-            <h3>A demo site for Ido's shows on Monetization</h3>
-            <br>
-            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+            <h3>A demo site for Ido's show on Monetization</h3>
+            <p>
+                In order to test this form, try these <a href="https://stripe.com/docs/testing">testing credit card numbers</a>
+            </p>
+            <form action="charge.php" method="POST">
+                  <script
+                    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="pk_test_2HBorPiB3CC68c1ujnhqGMd0"
+                    data-image="img/marketplace.png"
+                    data-name="Ido's Example"
+                    data-description="One Hour with Ido ($9,999.99)"
+                    data-amount="999999.99">
+                  </script>
+                </form>
+                
         </div>
     </header>
 
-    <!-- About -->
+    <!-- About             <a href="#about" class="btn btn-dark btn-lg">Find Out More</a> -->
     <section id="about" class="about">
         <div class="container">
             <div class="row">
@@ -189,14 +201,14 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h3>The buttons below are impossible to resist.</h3>
-                <a href="#" class="btn btn-lg btn-light">Pay!</a>
-
+                <a href="#" class="btn btn-lg btn-light">To Pay Or Not To Pay!</a>
             </div>
         </div>
     </div>
 </aside>
 
 <!-- Map?
+    
 <section id="contact" >
     <div class="container">
         <div class="row">
