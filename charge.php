@@ -1,5 +1,5 @@
 <?php
-// Get the latest version from: https://github.com/stripe/stripe-php/releases
+// Get the latest version of stripe from: https://github.com/stripe/stripe-php/releases
 require_once("stripe-php-1.18.0/lib/Stripe.php");
 
 //
