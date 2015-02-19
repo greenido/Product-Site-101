@@ -74,6 +74,7 @@ if ($_POST) {
     </head>
     <body>
         <h1>Charge $9,999.99 For an hour with Ido</h1>
+        <h5>* Price is what you pay value is what you get.</h5>
         <!-- to display errors returned by createToken -->
         <span class="payment-errors"><?= $error ?></span>
         <span class="payment-success"><?= $success ?></span>
