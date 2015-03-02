@@ -23,16 +23,15 @@ if ($_POST) {
     error_log("Err: could not create a payment: " . $error);
   }
 }
-
 ?>
  
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-        <title>Stripe Getting Started Form</title>
+        <title>Stripe - Getting Started Form</title>
         <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
-        <!-- jQuery is used only for this example; it isn't required to use Stripe -->
+        
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
         <script type="text/javascript">
             // this identifies your website in the createToken call below
