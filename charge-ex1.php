@@ -31,9 +31,9 @@ if ($_POST) {
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
         <title>Stripe - Getting Started Form</title>
         <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
-        
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
         <script type="text/javascript">
+
             // this identifies your website in the createToken call below
             Stripe.setPublishableKey('pk_test_2HBorPiB3CC68c1ujnhqGMd0');
 
@@ -59,14 +59,16 @@ if ($_POST) {
                     // disable the submit button to prevent repeated clicks
                     $('.submit-button').attr("disabled", "disabled");
 
-                    // createToken returns immediately - the supplied callback submits the form if there are no errors
+                    // createToken returns immediately
+                    // the supplied callback submits the form if there are no errors
                     Stripe.createToken({
                         number: $('.card-number').val(),
                         cvc: $('.card-cvc').val(),
                         exp_month: $('.card-expiry-month').val(),
                         exp_year: $('.card-expiry-year').val()
                     }, stripeResponseHandler);
-                    return false; // submit from callback
+                    // submit from callback
+                    return false; 
                 });
             });
         </script>
