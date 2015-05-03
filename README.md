@@ -1,10 +1,9 @@
-# Product site Example
+# Simple product site 
 
 ## ToDo
-* Contact Form:
-  * [Mail chimp](http://kb.mailchimp.com/lists/signup-forms/add-a-signup-form-to-your-website)
-  * Google Forms
-  * Create your own
+* Contact Form - See how to customize Google forms or go with [mailchimp](https://apidocs.mailchimp.com/) / [WuFoo](http://www.wufoo.com/)
+* Test the options to use WSK tools in the dev process.
+* Check the option to use [ServiceWorkers](https://github.com/slightlyoff/ServiceWorker)
 * SDK
 * Videos to show the power of the platform
 * Let users leave feedback
