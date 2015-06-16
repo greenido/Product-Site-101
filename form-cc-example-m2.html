@@ -97,92 +97,91 @@
         </form>
       </div>
 
-    <form class="col s12">
-      <fieldset>
-        <legend>Shipping</legend>
-        <div class="form-group">
-          <label for="frmAddressS" class="active col-lg-2 control-label">Address</label>
-          <div class="col-lg-10">
-            <input name="ship-address" class="form-control validate" required id="frmAddressS" autocomplete="shipping street-address"></div>
-        </div>
-
-        <div class="form-group">
-          <label for="frmCityS" class="active col-lg-2 control-label">City</label>
-          <div class="col-lg-10">
-            <input name="ship-city" class="form-control validate" required id="frmCityS" placeholder="New York" autocomplete="shipping locality"></div>
-        </div>
-        <div class="form-group">
-          <label for="frmStateS" class="active col-lg-2 control-label">State</label>
-          <div class="col-lg-10">
-            <input name="ship-state" class="form-control validate" required id="frmStateS" placeholder="NY" autocomplete="shipping region"></div>
-        </div>
-
-        <div class="form-group">
-          <label for="frmZipS" class="active col-lg-2 control-label">Zip</label>
-          <div class="col-lg-10">
-            <input name="ship-zip" class="form-control validate" required id="frmZipS" placeholder="10011" autocomplete="shipping postal-code"></div>
-        </div>
-
-        <div class="form-group">
-          <label for="frmCountryS" class="active col-lg-2 control-label">Country</label>
-          <div class="col-lg-10">
-            <input name="ship-country" class="form-control validate" required id="frmCountryS" placeholder="USA" autocomplete="shipping country"></div>
-        </div>
-
-        <div class="row">
-          <div class="col s6">
-            <input type="checkbox" class="filled-in" name="billAndShip" id="cbBillAndShip">
-            <label for="cbBillAndShip">Bill to this address</label>
-          </div>
-        </div>
-
-      </fieldset>
-
-      <div id="paymentSec">
+      <form class="col s12">
         <fieldset>
-          <legend>Payment</legend>
-          <p> <i class="large mdi-action-add-shopping-cart"></i>
-            Do <b>NOT</b>
-            provide real credit card information in this field.
-          </p>
+          <legend>Shipping</legend>
           <div class="form-group">
-            <label for="frmNameCC" class="col-lg-2 control-label">Name on card</label>
+            <label for="frmAddressS" class="active col-lg-2 control-label">Address</label>
             <div class="col-lg-10">
-              <input name="ccname" id="frmNameCC" class="form-control" required placeholder="Full Name" autocomplete="cc-name"></div>
+              <input name="ship-address" class="form-control validate" required id="frmAddressS" autocomplete="shipping street-address"></div>
           </div>
 
           <div class="form-group">
-            <label for="frmCCNum" class="col-lg-2 control-label">Card Number</label>
+            <label for="frmCityS" class="active col-lg-2 control-label">City</label>
             <div class="col-lg-10">
-              <input name="cardnumber" id="frmCCNum" class="form-control" required autocomplete="cc-number"></div>
+              <input name="ship-city" class="form-control validate" required id="frmCityS" placeholder="New York" autocomplete="shipping locality"></div>
+          </div>
+          <div class="form-group">
+            <label for="frmStateS" class="active col-lg-2 control-label">State</label>
+            <div class="col-lg-10">
+              <input name="ship-state" class="form-control validate" required id="frmStateS" placeholder="NY" autocomplete="shipping region"></div>
           </div>
 
           <div class="form-group">
-            <label for="frmCCCVC" class="col-lg-2 control-label">CVC</label>
+            <label for="frmZipS" class="active col-lg-2 control-label">Zip</label>
             <div class="col-lg-10">
-              <input name="cvc" id="frmCCCVC" class="form-control" required autocomplete="cc-csc"></div>
+              <input name="ship-zip" class="form-control validate" required id="frmZipS" placeholder="10011" autocomplete="shipping postal-code"></div>
           </div>
 
           <div class="form-group">
-            <label for="frmCCExp" class="col-lg-2 control-label">Expiry</label>
+            <label for="frmCountryS" class="active col-lg-2 control-label">Country</label>
             <div class="col-lg-10">
-              <input name="cc-exp" id="frmCCExp" class="form-control" required placeholder="MM-YYYY" autocomplete="cc-exp"></div>
+              <input name="ship-country" class="form-control validate" required id="frmCountryS" placeholder="USA" autocomplete="shipping country"></div>
           </div>
 
-          <div class="container">
-            <div class="form-group">
-              <div class="col-lg-10 col-lg-offset-2">
-                <button class="btn btn-default">Cancel</button>
-                <button type="submit" id="butCheckout" class="btn btn-primary">Check Out</button>
-              </div>
+          <div class="row">
+            <div class="col s6">
+              <input type="checkbox" class="filled-in" name="billAndShip" id="cbBillAndShip">
+              <label for="cbBillAndShip">Bill to this address</label>
             </div>
           </div>
         </fieldset>
-      </div>
-    </form>
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
 
-  </body>
-</html>
+        <div id="paymentSec">
+          <fieldset>
+            <legend>Payment</legend>
+            <p> <i class="large mdi-action-add-shopping-cart"></i>
+              Do <b>NOT</b>
+              provide real credit card information in this field.
+            </p>
+            <div class="form-group">
+              <label for="frmNameCC" class="col-lg-2 control-label">Name on card</label>
+              <div class="col-lg-10">
+                <input name="ccname" id="frmNameCC" class="form-control" required placeholder="Full Name" autocomplete="cc-name"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="frmCCNum" class="col-lg-2 control-label">Card Number</label>
+              <div class="col-lg-10">
+                <input name="cardnumber" id="frmCCNum" class="form-control" required autocomplete="cc-number"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="frmCCCVC" class="col-lg-2 control-label">CVC</label>
+              <div class="col-lg-10">
+                <input name="cvc" id="frmCCCVC" class="form-control" required autocomplete="cc-csc"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="frmCCExp" class="col-lg-2 control-label">Expiry</label>
+              <div class="col-lg-10">
+                <input name="cc-exp" id="frmCCExp" class="form-control" required placeholder="MM-YYYY" autocomplete="cc-exp"></div>
+            </div>
+
+            <div class="container">
+              <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                  <button class="btn btn-default">Cancel</button>
+                  <button type="submit" id="butCheckout" class="btn btn-primary">Check Out</button>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </form>
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+
+</body>
+    </html>
