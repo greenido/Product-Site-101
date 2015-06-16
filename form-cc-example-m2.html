@@ -5,13 +5,12 @@
   <meta name="author" content="Ido Green | greenido.wordpress.com | @greenido">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#db5945">
-  
+
   <title>Auto Complete Attribute Example</title>
-  
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
-
 
 <body>
   <div class="container">
@@ -20,181 +19,152 @@
       <div class="col-md-4 col-xs-6">
         <p>
           <h4>Autofill in action</h4>
-          To try this example, open it in Chrome (version 42+) and try to start filling the fields. Chrome will suggest you 'auto fill' data from what it got so far. <br>
-        </p>
+          To try this example, open it in Chrome (version 42+) and try to start filling the fields. Chrome will suggest you 'auto fill' data from what it got so far.
+          <br></p>
       </div>
       <div class="col-md-4 col-xs-6">
         <h4>Wallet Integration</h4>
-        
-          If you got <a href="http://google.com/wallet"> Google Wallet</a> with you credit card data, even better! Go to the <a href="#paymentSec">'Payment' section</a> and start to fill the data. Chrome will offer you to pre-fill it with the current credit card's information wallet got on file.
-
-          <br>(!) The current spec can be found at: <a href="https://html.spec.whatwg.org/multipage/forms.html#association-of-controls-and-forms">html.spec.whatwg.org/multipage/forms.html</a>
+        If you got
+        <a href="http://google.com/wallet">Google Wallet</a>
+        with you credit card data, even better! Go to the
+        <a href="#paymentSec">'Payment' section</a>
+        and start to fill the data. Chrome will offer you to pre-fill it with the current credit card's information wallet got on file.
+        <br>
+        (!) The current spec can be found at:
+        <a href="https://html.spec.whatwg.org/multipage/forms.html#association-of-controls-and-forms">html.spec.whatwg.org/multipage/forms.html</a>
       </div>
     </div>
 
-  <div role="main">
-    <form method="post" id="usrForm" class="form-horizontal">
-      <fieldset>
-        <legend>Contact Info</legend>
-        <div class="form-group">
-          <label for="frmNameA" class="col-lg-2 control-label">Name</label>
-          <div class="col-lg-10">
-            <input name="name" id="frmNameA" class="form-control validate" placeholder="Full name" required autocomplete="name">
+    <div role="main">
+      <form method="post" id="usrForm" class="form-horizontal">
+        <fieldset>
+          <legend>Contact</legend>
+          <div class="form-group">
+            <label for="frmNameA" class="col-lg-2 control-label">Name</label>
+            <div class="col-lg-10">
+              <input name="name" id="frmNameA" class="form-control validate" placeholder="Full name" required autocomplete="name"></div>
           </div>
-        </div>
-        <div class="form-group">
-          <label for="frmEmailA" class="col-lg-2 control-label">Email</label>
-          <div class="col-lg-10">
-            <input type="email" name="email" class="form-control validate" id="frmEmailA" placeholder="name@example.com" required autocomplete="email">
+          <div class="form-group">
+            <label for="frmEmailA" class="col-lg-2 control-label">Email</label>
+            <div class="col-lg-10">
+              <input type="email" name="email" class="form-control validate" id="frmEmailA" placeholder="name@example.com" required autocomplete="email"></div>
           </div>
-        </div>
-        <div class="form-group">
-          <label for="frmEmailC" class="col-lg-2 control-label">Confirm Email</label>
-          <div class="col-lg-10">
-            <input type="email" name="emailC" class="form-control validate" id="frmEmailC" placeholder="name@example.com" required autocomplete="email">
+          <div class="form-group">
+            <label for="frmEmailC" class="col-lg-2 control-label">Confirm Email</label>
+            <div class="col-lg-10">
+              <input type="email" name="emailC" class="form-control validate" id="frmEmailC" placeholder="name@example.com" required autocomplete="email"></div>
           </div>
-        </div>
 
-        <div class="form-group">
-          <label for="frmPhoneNumA" class="col-lg-2 control-label">Phone</label>
-          <div class="col-lg-10">
-            <input type="tel" name="phone" id="frmPhoneNumA" class="form-control validate" placeholder="+1-650-450-1212" required autocomplete="tel">
+          <div class="form-group">
+            <label for="frmPhoneNumA" class="col-lg-2 control-label">Phone</label>
+            <div class="col-lg-10">
+              <input type="tel" name="phone" id="frmPhoneNumA" class="form-control validate" placeholder="+1-650-450-1212" required autocomplete="tel"></div>
           </div>
-        </div>
-      </fieldset>
+        </fieldset>
       </form>
 
-      <form class="col s12">
+      <div class="row">
+        <form class="col s12">
+          <fieldset>
+            <legend>Contact (Another way)</legend>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate" required autocomplete="fname">
+                <label for="first_name">First Name</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate" required autocomplete="lname">
+                <label for="last_name">Last Name</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s6">
+                <input name="frmEmailC" id="frmEmailA" type="text" class="validate" required autocomplete="email">
+                <label for="frmAddressB">Email</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s6">
+                <input name="phone" id="frmPhone" type="text" class="" required autocomplete="tel">
+                <label for="frmAddressB">Phone</label>
+              </div>
+            </div>
+
+          </fieldset>
+        </form>
+      </div>
 
       <fieldset>
         <legend>Shipping</legend>
-          <div class="form-group">
-            <label for="frmAddressS" class="active col-lg-2 control-label">Address</label>
-            <div class="col-lg-10">
-              <input name="ship-address" class="form-control validate" required id="frmAddressS" autocomplete="shipping street-address">
-            </div>
-          </div>
+        <div class="form-group">
+          <label for="frmAddressS" class="active col-lg-2 control-label">Address</label>
+          <div class="col-lg-10">
+            <input name="ship-address" class="form-control validate" required id="frmAddressS" autocomplete="shipping street-address"></div>
+        </div>
 
-          <div class="form-group">
-            <label for="frmCityS" class="active col-lg-2 control-label">City</label>
-            <div class="col-lg-10">
-              <input name="ship-city" class="form-control validate" required id="frmCityS" placeholder="New York" autocomplete="shipping locality">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="frmStateS" class="active col-lg-2 control-label">State</label>
-            <div class="col-lg-10">
-              <input name="ship-state" class="form-control validate" required id="frmStateS" placeholder="NY" autocomplete="shipping region">
-            </div>
-          </div>
+        <div class="form-group">
+          <label for="frmCityS" class="active col-lg-2 control-label">City</label>
+          <div class="col-lg-10">
+            <input name="ship-city" class="form-control validate" required id="frmCityS" placeholder="New York" autocomplete="shipping locality"></div>
+        </div>
+        <div class="form-group">
+          <label for="frmStateS" class="active col-lg-2 control-label">State</label>
+          <div class="col-lg-10">
+            <input name="ship-state" class="form-control validate" required id="frmStateS" placeholder="NY" autocomplete="shipping region"></div>
+        </div>
 
-          <div class="form-group">
-            <label for="frmZipS" class="active col-lg-2 control-label">Zip</label>
-              <div class="col-lg-10">
-                <input name="ship-zip" class="form-control validate" required id="frmZipS" placeholder="10011" autocomplete="shipping postal-code">
-              </div>
-          </div>
+        <div class="form-group">
+          <label for="frmZipS" class="active col-lg-2 control-label">Zip</label>
+          <div class="col-lg-10">
+            <input name="ship-zip" class="form-control validate" required id="frmZipS" placeholder="10011" autocomplete="shipping postal-code"></div>
+        </div>
 
         <div class="form-group">
           <label for="frmCountryS" class="active col-lg-2 control-label">Country</label>
           <div class="col-lg-10">
-            <input name="ship-country" class="form-control validate" required id="frmCountryS" placeholder="USA" autocomplete="shipping country">
-          </div>
+            <input name="ship-country" class="form-control validate" required id="frmCountryS" placeholder="USA" autocomplete="shipping country"></div>
         </div>
 
         <div class="row">
-          <div class="col s6 ">
-            <input type="checkbox" class="filled-in name="billAndShip" id="cbBillAndShip">
-            <label for="cbBillAndShip" >Bill to this address</label>
+          <div class="col s6">
+            <input type="checkbox" class="filled-in" name="billAndShip" id="cbBillAndShip">
+            <label for="cbBillAndShip">Bill to this address</label>
           </div>
         </div>
 
       </fieldset>
 
-
-<div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s6">
-          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-          <label for="first_name">First Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">Last Name</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-          <label for="disabled">Disabled</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
-          <label for="password">Password</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
-          <label for="email">Email</label>
-        </div>
-      </div>
-    </form>
-  </div>
-        
-
-
-      <fieldset>
-          <legend>Billing</legend>
-          <label for="frmAddressB">Address</label>
-          <input name="bill-address" id="frmAddressB" required placeholder="123 Any Street" autocomplete="billing street-address">
-          <label for="frmCityB">City</label>
-          <input name="bill-city" id="frmCityB" required placeholder="New York" autocomplete="billing locality">
-          <label for="frmStateB">State</label>
-          <input name="bill-state" id="frmStateB" required placeholder="NY" autocomplete="billing region">
-          <label for="frmZipB">Zip</label>
-          <input name="bill-zip" id="frmZipB" required placeholder="10011" autocomplete="billing postal-code">
-          <label for="frmCountryB">Country</label>
-          <input name="bill-country" id="frmCountryB" required placeholder="USA" autocomplete="billing country">
-      </fieldset>
-            
       <div id="paymentSec">
         <fieldset>
           <legend>Payment</legend>
-          <p>
-            <i class="large mdi-action-add-shopping-cart"></i>
+          <p> <i class="large mdi-action-add-shopping-cart"></i>
             Do <b>NOT</b>
             provide real credit card information in this field.
           </p>
           <div class="form-group">
             <label for="frmNameCC" class="col-lg-2 control-label">Name on card</label>
             <div class="col-lg-10">
-              <input name="ccname" id="frmNameCC" class="form-control" required placeholder="Full Name" autocomplete="cc-name">
-            </div>
+              <input name="ccname" id="frmNameCC" class="form-control" required placeholder="Full Name" autocomplete="cc-name"></div>
           </div>
 
           <div class="form-group">
             <label for="frmCCNum" class="col-lg-2 control-label">Card Number</label>
             <div class="col-lg-10">
-              <input name="cardnumber" id="frmCCNum" class="form-control" required autocomplete="cc-number">
-            </div>
+              <input name="cardnumber" id="frmCCNum" class="form-control" required autocomplete="cc-number"></div>
           </div>
 
           <div class="form-group">
             <label for="frmCCCVC" class="col-lg-2 control-label">CVC</label>
             <div class="col-lg-10">
-              <input name="cvc" id="frmCCCVC" class="form-control" required autocomplete="cc-csc">
-            </div>
+              <input name="cvc" id="frmCCCVC" class="form-control" required autocomplete="cc-csc"></div>
           </div>
 
           <div class="form-group">
             <label for="frmCCExp" class="col-lg-2 control-label">Expiry</label>
             <div class="col-lg-10">
-              <input name="cc-exp" id="frmCCExp" class="form-control" required placeholder="MM-YYYY" autocomplete="cc-exp">
-            </div>
+              <input name="cc-exp" id="frmCCExp" class="form-control" required placeholder="MM-YYYY" autocomplete="cc-exp"></div>
           </div>
 
           <div class="container">
@@ -208,13 +178,9 @@
         </fieldset>
       </div>
 
-      </form>
-    </div>
-  </div>
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>       
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
-     
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
 
-  </body>
-</html>
+</body>
+    </html>
