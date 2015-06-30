@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Ido Green | greenido.wordpress.com | @greenido">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#db5945">
+  <title>Auto Complete Attribute Example</title>
+  <style type="text/css">
+    input, textarea {
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      width: 100%;
+      border: 1px solid gray;
+    }
+    p {
+      background: rgba(244, 187, 110, 0.47);
+      padding: 0.7em;
+      border-radius: 1em;
+    }
+    form {
+      width: 100%;
+    }
+    input.dirty:not(:focus):invalid {
+      background-color: #FFD9D9;
+    }
+    input.dirty:not(:focus):valid {
+      background-color: #D9FFD9;
+    }
+    fieldset {
+      background: rgba(199, 183, 171, 0.61);
+      margin-top: 2.5em;
+      border-radius: 1em;
+    }
+    legend {
+      font-size: 120%;
+      padding-right: 0.5em;
+      padding-left: 0.5em;
+    }
+    #butCheckout {
+      padding: 1.5em;
+      border-radius: 0.2em;
+    }
+  </style>
+<body>
+  <h1>AutoComplete Example</h1>
+  <p>
+    To try this example, open it in Chrome (version 42+) and try to start filling the fields. Chrome will suggest you 'auto fill' data from what it got so far.
+    <br></p>
+  <h3>Wallet Integration</h3>
+  <p>
+    If you got
+    <a href="http://google.com/wallet">Google Wallet</a>
+    with you credit card data, even better! Go to the
+    <a href="#paymentSec">'Payment' section</a>
+    and start to fill the data. Chrome will offer you to pre-fill it with the current credit card's information wallet got on file.
+    <br>
+    (!) The current spec can be found at:
+    <a href="https://html.spec.whatwg.org/multipage/forms.html#association-of-controls-and-forms">html.spec.whatwg.org/multipage/forms.html</a>
+  </p>
+  <h3>Material Design</h3>
+  <p>
+    You can see one way to leverage the power of material design with these forms in this
+    <a href="form-cc-example-m2.html">Material design example</a>
+  </p>
+  <div role="main">
+    <form method="post" id="usrForm">
+      <fieldset>
+        <legend>Contact Info</legend>
+        <label for="frmNameA">Name</label>
+        <input name="name" id="frmNameA" placeholder="Full name" required autocomplete="name">
+        <label for="frmEmailA">Email</label>
+        <input type="email" name="email" id="frmEmailA" placeholder="name@example.com" required autocomplete="email">
+        <label for="frmEmailC">Confirm Email</label>
+        <input type="email" name="emailC" id="frmEmailC" placeholder="name@example.com" required autocomplete="email">
+        <label for="frmPhoneNumA">Phone</label>
+        <input type="tel" name="phone" id="frmPhoneNumA" placeholder="+1-650-450-1212" required autocomplete="tel">
+
+        <datalist id="chocType">
+          <option value="white">
+            <option value="milk">
+              <option value="dark"></datalist>
+            </fieldset>
+            <fieldset>
+              <legend>Shipping</legend>
+              <label for="frmAddressS">Address</label>
+              <input name="ship-address" required id="frmAddressS" placeholder="123 Any Street" autocomplete="shipping street-address">
+              <label for="frmCityS">City</label>
+              <input name="ship-city" required id="frmCityS" placeholder="New York" autocomplete="shipping locality">
+              <label for="frmStateS">State</label>
+              <input name="ship-state" required id="frmStateS" placeholder="NY" autocomplete="shipping region">
+              <label for="frmZipS">Zip</label>
+              <input name="ship-zip" required id="frmZipS" placeholder="10011" autocomplete="shipping postal-code">
+              <label for="frmCountryS">Country</label>
+              <input name="ship-country" required id="frmCountryS" placeholder="USA" autocomplete="shipping country">
+
+              <label>
+                <input type="checkbox" name="billAndShip" id="cbBillAndShip">
+                <br>Bill to this address.</label>
+            </fieldset>
+            <fieldset>
+              <legend>Billing</legend>
+              <label for="frmAddressB">Address</label>
+              <input name="bill-address" id="frmAddressB" required placeholder="123 Any Street" autocomplete="billing street-address">
+              <label for="frmCityB">City</label>
+              <input name="bill-city" id="frmCityB" required placeholder="New York" autocomplete="billing locality">
+              <label for="frmStateB">State</label>
+              <input name="bill-state" id="frmStateB" required placeholder="NY" autocomplete="billing region">
+              <label for="frmZipB">Zip</label>
+              <input name="bill-zip" id="frmZipB" required placeholder="10011" autocomplete="billing postal-code">
+              <label for="frmCountryB">Country</label>
+              <input name="bill-country" id="frmCountryB" required placeholder="USA" autocomplete="billing country"></fieldset>
+
+            <div id="paymentSec">
+              <fieldset>
+                <legend>Payment</legend>
+                <p>
+                  Do <b>NOT</b>
+                  provide real credit card information in this field.
+                </p>
+                <label for="frmNameCC">Name on card</label>
+                <input name="ccname" id="frmNameCC" required placeholder="Full Name" autocomplete="cc-name">
+                <label for="frmCCNum">Card Number</label>
+                <input name="cardnumber" id="frmCCNum" required autocomplete="cc-number">
+                <label for="frmCCCVC">CVC</label>
+                <input name="cvc" id="frmCCCVC" required autocomplete="cc-csc">
+                <label for="frmCCExp">Expiry</label>
+                <input name="cc-exp" id="frmCCExp" required placeholder="MM-YYYY" autocomplete="cc-exp">
+                <div>
+                  <button class="btn" id="butCheckout">Check Out</button>
+                </div>
+              </fieldset>
+            </div>
+          </form>
+        </div>
+        <!-- GA -->
+        <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-53348325-1', 'auto');
+      ga('require', 'displayfeatures');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
