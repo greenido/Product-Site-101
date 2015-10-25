@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Drone At Work Platform">
+    <meta name="author" content="Ido Green | @greenido | +Greenido">
+
+    <title>Drone At Work</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        #goBut {
+            margin: 0.3em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"> <i class="fa fa-bars"></i>
+    </a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"> <i class="fa fa-times"></i>
+            </a>
+            <li class="sidebar-brand">
+                <a href="#top">Drone At Work</a>
+            </li>
+            <li>
+                <a href="/Product-Site-101/index.html">Home</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1>Drone At Work</h1>
+            <h3>Thank you! You will be happy :)</h3>
+            
+        </div>
+    </header>
+
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h4>
+                    <strong>Drone At Work</strong>
+                </h4>
+                <p>Tel Aviv, Israel 67890</p>
+                <ul class="list-unstyled">
+                    <li>
+                        <i class="fa fa-phone fa-fw"></i>
+                        <a href="tel:+1234567890">(123) 456-7890</a>
+                    </li>
+                </ul>
+                <br>
+                <ul class="list-inline">
+                    <!-- More great icons: http://fortawesome.github.io/Font-Awesome/icons/ -->
+                    <li>
+                        <a href="http://ido-green.appspot.com" target="_blank">
+                            <i class="fa fa-users fa-fw fa-3x"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://greenido.wordpress.com"  target="_blank">
+                            <i class="fa fa-glass fa-fw fa-3x"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://twitter.com/greenido" target="_blank">
+                            <i class="fa fa-twitter fa-fw fa-3x"></i>
+                        </a>
+                    </li>
+
+                </ul>
+                <hr class="small">
+                <p class="text-muted">Copyright &copy; Drone At Work 2014</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        // hide our little alerts around the email field
+        $( ".alert" ).hide();
+
+        // scroll nicely from the menu to the right location on the page
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+
+    //
+    // Validator for email - just the first layer of defense ;)
+    //
+    function isEmailValid(email) { 
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    }    
+    // email saver
+    $("#goBut").click(function(e) {
+        // send the email
+        var uEmail = $("#uEmail").val();
+        if (isEmailValid(uEmail)) {
+            $.get( "https://script.google.com/macros/s/AKfycbzX_5c7gkqc-dttpHsK2KvTH3XJgAMh0jaXIky7cHPNEmchy_M/exec", { email: uEmail } );    
+            // show thx dialog
+            $(".alert-warning").hide();
+            $(".alert-info").show();
+        }
+        else {
+            $(".alert-warning").show();
+            $("#uEmail").focus();
+        }
+        
+    })
+    </script>
+
+    <!-- GA -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-53348325-1', 'auto');
+      ga('require', 'displayfeatures');
+      ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
