@@ -9,7 +9,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
-
+  <style>
+    label.col-lg-2.control-label {
+      padding-top: 1em;
+    }
+  </style>
 <body>
   <div class="container">
     <div class="row jumbotron">
@@ -151,14 +155,14 @@
               <div class="col-lg-10">
                 <input name="cc-exp" id="frmCCExp" class="form-control" required placeholder="MM-YYYY" autocomplete="cc-exp"></div>
             </div>
-            <div class="container">
+            
               <div class="form-group">
-                <div class="col-lg-10 col-lg-offset-2">
+                <div class="col-lg-12">
                   <button class="btn btn-default">Cancel</button>
-                  <button type="submit" id="butCheckout" class="btn btn-primary">Check Out</button>
+                  <button type="submit" id="butCheckout" class="btn btn-success">Check Out</button>
                 </div>
               </div>
-            </div>
+            
           </form>
         </div>
 
