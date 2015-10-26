@@ -16,13 +16,19 @@
     .col.s10 {
       padding-left: 2em;
     }
+    #help-btn {
+      position: fixed;
+      right: 5px;
+      top: 5px;
+    }
   </style>
 <body>
   <div class="container">
     <div class="row jumbotron">
-      <h3>Auto Complete Example</h3>
-      <button class="btn btn-warning" type="button" data-toggle="collapse" 
+      <button id="help-btn" class="btn btn-warning" type="button" data-toggle="collapse" 
         data-target="#details" aria-expanded="false" aria-controls="details">?</button>
+      <h3>Auto Complete Example</h3>
+      
       <div class="collapse" id="details">
         <div class="col-md-11 col-xs-11">
           <h4>Autofill in action</h4>
