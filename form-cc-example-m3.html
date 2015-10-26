@@ -10,9 +10,24 @@
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
   <style>
-    .control-label {
-      padding-top: 1em;
+    @media only screen and (min-width: 900px) {
+      label.col-lg-2.control-label {
+        padding-top: 1.5em;
+      }
+      .col-lg-10 {
+        padding-top: 1em;
+      }
+    } 
+
+    @media (max-width: 450px) {
+      label.col-lg-2.control-label {
+        padding-top: 0.6em;
+      }
+      .col-lg-10 {
+        padding-top: 0.6em;
+      }
     }
+    
     .col.s10 {
       padding-left: 2em;
     }
